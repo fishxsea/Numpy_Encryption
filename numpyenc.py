@@ -6,7 +6,6 @@ from charcade import color, palettes
 from random import choice
 
 def encrypt(user_input):
-
     alph = string.ascii_letters + string.digits + string.punctuation + ' '
 
     # Shuffles a 2d array of numbers 1 through the length of the alphabet
