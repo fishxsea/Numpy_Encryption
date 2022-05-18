@@ -3,8 +3,6 @@ from numpyenc import encrypt
 from charcade import Arcade, color, palettes, colorchart
 from random import choice
 
-
-
 def main():
     color_palette = palettes('soft sun')
     
