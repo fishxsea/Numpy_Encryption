@@ -2,7 +2,8 @@ import string
 import numpy as np
 import random
 from numpy.random import randint
-from charcade import color
+from charcade import color, palettes
+from random import choice
 
 def encrypt(user_input):
 
@@ -87,8 +88,8 @@ def encrypt(user_input):
         encrypted += new_alph[new_loc]            # are not the same when shifted
         num += (2 + num)
 
-    color1 = 'orange70'
-    color2 = 'pink'
-    print(color('\nEncrypted Message: ', color1) + color(encrypted, color2))
-    print(color('Key: ', color1) + color(key + '\n', color2))
+    color_palette = palettes('soft sun')
+
+    print(color('\nEncrypted Message: ', choice(color_palette)) + color(encrypted, choice(color_palette)))
+    print(color('Key: ', choice(color_palette)) + color(key + '\n', choice(color_palette)))
     

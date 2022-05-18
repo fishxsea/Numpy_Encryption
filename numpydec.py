@@ -1,12 +1,11 @@
 import string
-from charcade import color
+from charcade import color, palettes
 import numpy as np
+from random import choice
 
 def decrypt(msg_input, key_input):
     # Breaks key into parts for use in alphabet creation and cipher
-    
     key_split = key_input.split('-')
-
     shift_key_alph = int(key_split[0])
     range_key = int(key_split[1])
     shift_key_cipher = int(key_split[2])
@@ -81,4 +80,5 @@ def decrypt(msg_input, key_input):
         decrypted += new_alph[new_loc]
         num += (2 + num)
 
-    print(color('\nDecrypted Message: ', 'white') + color(decrypted + '\n', 'pink')) 
+    color_palette = palettes('soft sun')
+    print(color('\nDecrypted Message: ', choice(color_palette)) + color(decrypted + '\n', choice(color_palette))) 
